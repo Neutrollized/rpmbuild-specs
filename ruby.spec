@@ -1,3 +1,5 @@
+%define rubyver	2.5
+
 Name:           ruby
 Version:        2.5.0
 Release:        1%{?dist}
@@ -5,7 +7,7 @@ Summary:        Ruby - A Programmer's Best Friend
 
 License:        GPLv2
 URL:            https://www.ruby-lang.org
-Source0:        https://cache.ruby-lang.org/pub/ruby/2.5/%{name}-%{version}.tar.gz
+Source0:        https://cache.ruby-lang.org/pub/ruby/%{rubyver}/%{name}-%{version}.tar.gz
 
 BuildRequires:	readline-devel openssl-devel gdbm-devel libyaml-devel ncurses-devel glibc-devel tcl-devel
 Requires:	libyaml openssl
@@ -50,9 +52,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/bin/ruby
 /usr/lib64/ruby/
 /usr/lib64/libruby.so
-/usr/lib64/libruby.so.2.5
-/usr/lib64/libruby.so.2.5.0
-/usr/lib64/pkgconfig/ruby-2.5.pc
+/usr/lib64/libruby.so.%{rubyver}
+/usr/lib64/libruby.so.%{version}
+/usr/lib64/pkgconfig/ruby-%{rubyver}.pc
 
 %doc
 
